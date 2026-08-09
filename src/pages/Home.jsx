@@ -1,10 +1,25 @@
-import { Box, Typography } from "@mui/material";
+import {Box, Paper, Typography} from "@mui/material";
+import Navbar from "../components/Navbar.jsx";
 
 function Home() {
     return (
-        <Box sx={{ minHeight: '100vh', backgroundColor: '#e0f7fa', padding: 4 }}>
-            <Typography variant="h3">Welcome dear Homosapiens</Typography>
-            <Typography variant="body1">This is my shitty ass page you will waste your time on</Typography>
-        </Box>
+        <>
+            <Navbar/>
+
+            <Paper
+                elevation={3}
+                sx={{
+                    backgroundColor: "rgba(31, 99, 135, 0.169)",
+                    color: 'white',
+                    borderRadius: '16px',
+                    padding: '24px',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                }}
+            >
+                paper test
+            </Paper>
+        </>
     );
 }export default Home
