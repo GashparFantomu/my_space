@@ -20,6 +20,7 @@ function Home() {
 
                     <Grid item xs={12} md={4}>
                         <Paper
+
                             elevation={3}
                             sx={{
                                 backgroundColor: "rgba(31, 99, 135, 0.169)",
