@@ -20,6 +20,30 @@ function Home() {
 
                     <Grid item xs={12} md={4}>
                         <Paper
+                            elevation={3}
+                            sx={{
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px',
+                            }}>
+
+                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
+                            }}>
+                                <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+                                    <Typography variant="h4">
+                                         personal space
+                                    </Typography>
+                                    <Typography variant="subtitle1">
+                                        idk how you got here, but thanks for dropping by :D
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Paper>
+                    </Grid>
+
+                    <Grid item xs={12} md={4    }>
+                        <Paper
 
                             elevation={3}
                             sx={{
@@ -28,7 +52,7 @@ function Home() {
                                 borderRadius: '16px',
                                 padding: '24px',
                             }}>
-                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
+                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'center'}, gap: 2
                             }}>
                                 <Avatar sx={{width: 150, height: 150}}  alt="stai sa se incarce poza..." src="/profile1.jpg"></Avatar>
                                 <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
@@ -40,7 +64,30 @@ function Home() {
                                     </Typography>
                                 </Box>
                             </Box>
+                        </Paper>
+                    </Grid>
 
+                    <Grid item xs={12} md={4}>
+                        <Paper
+                            elevation={3}
+                            sx={{
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px',
+                            }}>
+
+                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
+                            }}>
+                                <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+                                    <Typography variant="h4">
+                                         personal space
+                                    </Typography>
+                                    <Typography variant="subtitle1">
+                                        idk how you got here, but thanks for dropping by :D
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </Paper>
                     </Grid>
                     <Grid item xs={12} md={4}>
@@ -53,24 +100,17 @@ function Home() {
                                 padding: '24px',
                             }}>
 
-                            <Typography variant="h6">
-                                card 2
-                            </Typography>
-                        </Paper>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Paper
-                            elevation={3}
-                            sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
+                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
                             }}>
-
-                            <Typography variant="h6">
-                                card 3
-                            </Typography>
+                                <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+                                    <Typography variant="h4">
+                                         personal space
+                                    </Typography>
+                                    <Typography variant="subtitle1">
+                                        idk how you got here, but thanks for dropping by :D
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </Paper>
                     </Grid>
                 </Grid>
