@@ -17,11 +17,85 @@ function Home() {
 
             <Box component="main" sx={{flexGrow: 1, p:3}}>
                 <Grid container spacing={3}>
+                    {/*c1*/}
+                    <Grid item xs={12} md={4}>
+                        <Box sx={{flexDirection: 'column', display: 'flex', gap: 3}}>
+                            <Paper
+                                elevation={3}
+                                sx={{
+                                    backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                    color: 'white',
+                                    borderRadius: '16px',
+                                    padding: '24px',
+                                }}>
+
+                                <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2}}>
+                                    <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+                                        <Typography variant="h4">
+                                            personal space 1 nenea nenea
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            idk how you got here, but thanks for dropping by :D
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </Paper>
+
+                            <Paper elevation={3} sx={{
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px'
+                            }}>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Typography variant="h6">Card suplimentar de test in Coloana 1 dar in mijloc</Typography>
+                                </Box>
+                            </Paper>
+
+                            <Paper elevation={3} sx={{
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px'
+                            }}>
+                                <Typography variant="h6">Card suplimentar 2 de test in Coloana 1</Typography>
+                            </Paper>
+
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={4}>
+                        <Box sx={{flexDirection: 'column', display: 'flex', gap: 3}}>
+                            <Paper
+                                elevation={3}
+                                sx={{
+                                display: 'flex',
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px',
+                                }}>
+                                <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'center'}, gap: 2
+                                }}>
+                                    <Avatar sx={{width: 150, height: 150}}  alt="stai sa se incarce poza..." src="/profile1.jpg"></Avatar>
+                                    <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+                                        <Typography variant="h4">
+                                            nenea nenea nenea nenea
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            nenea NENEA
+                                        </Typography>
+                                    </Box>
+                                </Box>
+                            </Paper>
+                        </Box>
+                    </Grid>
 
                     <Grid item xs={12} md={4}>
                         <Paper
                             elevation={3}
                             sx={{
+                                display: 'flex',
                                 backgroundColor: "rgba(31, 99, 135, 0.169)",
                                 color: 'white',
                                 borderRadius: '16px',
@@ -32,7 +106,7 @@ function Home() {
                             }}>
                                 <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
                                     <Typography variant="h4">
-                                         personal space
+                                         personal space 2
                                     </Typography>
                                     <Typography variant="subtitle1">
                                         idk how you got here, but thanks for dropping by :D
@@ -42,77 +116,6 @@ function Home() {
                         </Paper>
                     </Grid>
 
-                    <Grid item xs={12} md={4    }>
-                        <Paper
-
-                            elevation={3}
-                            sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
-                            }}>
-                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'center'}, gap: 2
-                            }}>
-                                <Avatar sx={{width: 150, height: 150}}  alt="stai sa se incarce poza..." src="/profile1.jpg"></Avatar>
-                                <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-                                    <Typography variant="h4">
-                                        nenea nenea nenea nenea
-                                    </Typography>
-                                    <Typography variant="subtitle1">
-                                        nenea NENEA
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Paper>
-                    </Grid>
-
-                    <Grid item xs={12} md={4}>
-                        <Paper
-                            elevation={3}
-                            sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
-                            }}>
-
-                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
-                            }}>
-                                <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
-                                    <Typography variant="h4">
-                                         personal space
-                                    </Typography>
-                                    <Typography variant="subtitle1">
-                                        idk how you got here, but thanks for dropping by :D
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Paper>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <Paper
-                            elevation={3}
-                            sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
-                            }}>
-
-                            <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
-                            }}>
-                                <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
-                                    <Typography variant="h4">
-                                         personal space
-                                    </Typography>
-                                    <Typography variant="subtitle1">
-                                        idk how you got here, but thanks for dropping by :D
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Paper>
-                    </Grid>
                 </Grid>
             </Box>
             <Footer/>
