@@ -1,6 +1,11 @@
-import {Avatar, Box, CssBaseline, Grid, Paper, Typography} from "@mui/material";
+import {Avatar, Box, Button, CssBaseline, Grid, IconButton, Paper, Stack, Typography} from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import {Instagram} from "@mui/icons-material";
 
 function Home() {
     return (
@@ -58,7 +63,76 @@ function Home() {
                                 borderRadius: '16px',
                                 padding: '24px'
                             }}>
-                                <Typography variant="h6">Card suplimentar 2 de test in Coloana 1</Typography>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Typography variant="h4">Hall of fame for my projects</Typography>
+                                </Box>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Button variant="outlined">
+                                        <Typography variant="subtitle1">
+                                            project
+                                        </Typography>
+                                    </Button>
+                                </Box>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Button variant="outlined">
+                                        <Typography variant="subtitle1">
+                                            project 1
+                                        </Typography>
+                                    </Button>
+                                </Box>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Button variant="outlined">
+                                        <Typography variant="subtitle1">
+                                            project 1 - some hullshi-
+                                        </Typography>
+                                    </Button>
+                                </Box>
+                            </Paper>
+                            <Paper elevation={3} sx={{
+                                backgroundColor: "rgba(31, 99, 135, 0.169)",
+                                color: 'white',
+                                borderRadius: '16px',
+                                padding: '24px',
+                                alignItems: {xs: 'center', md: 'center'},
+                            }}>
+                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                                    <Typography variant="h4">
+                                        My Socials
+                                    </Typography>
+                                    <Stack direction="row" spacing={3}>
+                                        <IconButton component="a"
+                                                    href="https://github.com/GashparFantomu"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    sx={{color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '12px'}}>
+                                            <GitHubIcon sx={{fontSize: 26}} />
+                                        </IconButton>
+                                        <IconButton component="a"
+                                                    href="https://github.com/GashparFantomu"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    sx={{color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '12px'}}>
+                                            <InstagramIcon sx={{fontSize: 26}} />
+                                        </IconButton>
+                                        <IconButton component="a"
+                                                    href="https://github.com/GashparFantomu"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    sx={{color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '12px'}}>
+                                            <LinkedInIcon sx={{fontSize: 26}} />
+                                        </IconButton>
+                                        <IconButton component="a"
+                                                    href="https://github.com/GashparFantomu"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    sx={{color: 'white', backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '12px'}}>
+                                            <YouTubeIcon sx={{fontSize: 26}} />
+                                        </IconButton>
+
+                                    </Stack>
+                                </Box>
+
+
                             </Paper>
 
                         </Box>
