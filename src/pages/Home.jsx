@@ -6,8 +6,25 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
+const webDesc="short text for flexgrow"
+
+const cardSx = {
+    backgroundColor: "rgba(31, 99, 135, 0.169)",
+    color: 'white',
+    borderRadius: '16px',
+    padding: '24px',
+};
+
+const columnSx = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 3,
+    flexGrow: 1,
+    width: '100%',
+};
 function Home() {
     return (
+
         <Box sx={{display: 'flex',
             flexDirection: 'column',
             minHeight: '100vh',
@@ -20,21 +37,13 @@ function Home() {
             <Navbar/>
 
             <Box component="main" sx={{flexGrow: 1, p:3}}>
-                <Grid container spacing={3} alignItems="stretch">
+                <Grid container spacing={3}>
                     {/*c1*/}
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{flexDirection: 'column', display: 'flex', gap: 3}}>
-                            <Paper
-                                elevation={3}
-                                sx={{
-                                    backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                    color: 'white',
-                                    borderRadius: '16px',
-                                    padding: '24px',
-                                }}>
-
-                                <Box sx={{ flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'center'}, gap: 2}}>
-                                    <Box sx={{ textAlign: { xs: 'center', md: 'center' }, justifyContent: 'center' }}>
+                    <Grid item xs={12} md={12} sx={{display: 'flex'}}>
+                        <Box sx={columnSx}>
+                            <Paper elevation={3} sx={cardSx}>
+                                <Box sx={{ flexDirection: {xs: 'column', md: 'row'}, alignItems: 'center', gap: 2}}>
+                                    <Box sx={{ textAlign: 'center', justifyContent: 'center' }}>
                                         <Typography variant="h4">
                                             personal space 1 nenea nenea
                                         </Typography>
@@ -46,14 +55,8 @@ function Home() {
                             </Paper>
                             <Paper
                                 elevation={3}
-                                sx={{
-                                    display: 'flex',
-                                    backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                    color: 'white',
-                                    borderRadius: '16px',
-                                    padding: '24px',
-                                }}>
-                                <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'center'}, gap: 2
+                                sx={cardSx}>
+                                <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: 'center', gap: 2
                                 }}>
                                     <Avatar sx={{width: 150, height: 150}}  alt="stai sa se incarce poza..." src="/profile1.jpg"></Avatar>
                                     <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
@@ -67,13 +70,8 @@ function Home() {
                                 </Box>
                             </Paper>
 
-                            <Paper elevation={3} sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px'
-                            }}>
-                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                            <Paper elevation={3} sx={cardSx}>
+                                <Box sx={{textAlign: 'center'}}>
                                     <Typography variant="h4">Hall of fame for my projects</Typography>
                                 </Box>
                                 <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
@@ -94,14 +92,8 @@ function Home() {
                                     </Button>
                                 </Box>
                             </Paper>
-                            <Paper elevation={3} sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
-                                alignItems: {xs: 'center', md: 'center'},
-                            }}>
-                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
+                            <Paper elevation={3} sx={cardSx}>
+                                <Box sx={{textAlign: 'center'}}>
                                     <Typography variant="h4">
                                         My Socials
                                     </Typography>
@@ -139,43 +131,23 @@ function Home() {
                             </Paper>
                         </Box>
                     </Grid>
-
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{display: 'flex', flexDirection: 'column', gap: 3, width: '100%'}}>
-
-                            <Paper elevation={3} sx={{
-                                backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                color: 'white',
-                                borderRadius: '16px',
-                                padding: '24px',
-                                flexGrow: 1,
-                                alignItems: {xs: 'center', md: 'center'},
-                                alignText: {xs: 'center', md: 'center'},
-                            }}>
-                                <Box sx={{textAlign: { xs: 'center', md: 'center' }}}>
-                                    <Typography variant="h6">Card suplimentar de test in Coloana 1</Typography>
+                    {/*c2*/}
+                    <Grid item xs={12} md={12}>
+                        <Box sx={columnSx}>
+                            <Paper elevation={3} sx={{...cardSx, flexGrow: 1}}>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <Typography variant="h4">About this website</Typography>
+                                    <Typography variant="subtitle1">{webDesc}</Typography>
                                 </Box>
                             </Paper>
-
                         </Box>
                     </Grid>
-
-                    <Grid item xs={12} md={4}>
-                        <Box sx={{display: 'flex', flexDirection: 'column', gap: 3, width: '100%'}}>
-                            <Paper
-                                elevation={3}
-                                sx={{
-                                    width: '100%',
-                                    backgroundColor: "rgba(31, 99, 135, 0.169)",
-                                    color: 'white',
-                                    borderRadius: '16px',
-                                    padding: '24px',
-                                    flexGrow: 1,
-                                }}>
-
-                                <Box sx={{ flexDirection: {xs: 'column', md: 'row'}, alignItems: {xs: 'center', md: 'flex-start'}, gap: 2
-                                }}>
-                                    <Box sx={{ textAlign: { xs: 'center', md: 'center' } }}>
+                    {/*c3*/}
+                    <Grid item xs={12} md={12}>
+                        <Box sx={columnSx}>
+                            <Paper elevation={3} sx={{...cardSx, flexGrow: 1}}>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <Box sx={{ textAlign: 'center' }}>
                                         <Typography variant="h4">
                                             personal space 2
                                         </Typography>
