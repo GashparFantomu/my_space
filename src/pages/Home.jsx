@@ -107,11 +107,26 @@ function Home() {
                         </Box>
                     </Card>
                     <Card>
-                        <Box sx={{display: 'flex', flexDirection: 'column', textAlign:'center', gap: 1}}>
-                            <Typography variant="h4">About this website</Typography>
-                            <Typography variant="subtitle1">{webDescription}</Typography>
+                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign:'center', gap: 4}}>
+                            <Box component="img" src="/pet-tux1.gif"/>
+                            <Box>
+                                <Typography variant="h4">About this website</Typography>
+                                <Typography variant="subtitle1">{webDescription}</Typography>
+                            </Box>
                         </Box>
                     </Card>
+                    <Card>
+                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign:'flex-start', gap: 4}}>
+                            <Box component="img" src="/tey.gif" sx={{width: 164, height: 164}}/>
+                            <Box>
+                                <Typography variant="h4">To do</Typography>
+                                <Typography variant="subtitle1">-dynamic theme based on time of day and season</Typography>
+                                <Typography variant="subtitle1">-task 2</Typography>
+                                <Typography variant="subtitle1">-task 3</Typography>
+                            </Box>
+                        </Box>
+                    </Card>
+
                 </Box>
             </Box>
 
