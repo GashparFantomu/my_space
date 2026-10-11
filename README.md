@@ -1,8 +1,5 @@
 
-will it look professional? no <br>
-will it be good? certainly not <br>
-will it be interesting? well, maybe for me :/ <br>
-will it be worth visiting? heck no <br>
-<br>
-do I still want to do it to learn React and Javascript? yup <br>
-do I want do learn other stuff by creating stuff for myself? yes
+
+my shit ass website because you need to have one in the tech world
+made with react and... nvm you can see i in the right
+made by a noob developer with autism (so you know it's good)
