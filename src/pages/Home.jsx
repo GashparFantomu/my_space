@@ -6,11 +6,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-const webDesc="short text for flexgrow"
-const profileDescription="h uihuy yuasgfy asyd gyASGY fgusf hsuf ghug euhgf swfehs fhuwehu fegwyugyfgwegfyw aegyfgyage uyigfawugf awegfwgefagwyf uagwkesr ygeshysezgt ryzwse";
+const webDescription="web description empty text to fill space more text even more text, long words like: thisisaverylongword," +
+    " ieabfibshbhueabiasebf esbf uaeshfubahsfib sekfn jen fjn sekjnfesfsenj kjneskf kjes jkneskfjnesk jfjknesfjknsefkjnse";
+const profileDescription="h uihuy yuasgfy asyd gyASGY fgusf hsuf ghug euhgf swfehs fhuwehu fegwyugyfgwegfyw aegyfgyage uyi" +
+    "gfawugf awegfwgefagwyf uagwkesr ygeshysezgt ryzwse";
 const backgroundThemes ={
 
 }
+
+const socialButtonSx = {
+    color: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    padding: '12px',
+};
 
 const cardSx = {
     backgroundColor: "rgba(31, 99, 135, 0.169)",
@@ -80,12 +88,30 @@ function Home() {
                         </Box>
                     </Card>
                     <Card>
-                        <Box>
-
+                        <Typography variant="h4" sx={{textAlign: 'center', mb: 2}}>
+                            Hall of fame for my projects
+                        </Typography>
+                        <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+                            <Button variant="outlined" sx={{borderRadius: 3}}>Windows</Button>
+                            <Button variant="outlined" sx={{borderRadius: 3}}>The linux kernel</Button>
+                            <Button variant="outlined" sx={{borderRadius: 3}}>Every linux distro</Button>
                         </Box>
                     </Card>
-
-
+                    <Card>
+                        <Box sx={{display: 'flex', flexDirection: 'column', gap: 1, textAlign: 'center'}}>
+                            <Typography variant='h4'>My Socials</Typography>
+                            <Box sx={{display: 'flex', justifyContent: 'space-around'}}>
+                                {socials.map(({label, icon, href}) => (
+                                        <IconButton key={label} component="a" href={href} aria-label={label} sx={socialButtonSx}>{icon}</IconButton>))}
+                            </Box>
+                        </Box>
+                    </Card>
+                    <Card>
+                        <Box sx={{display: 'flex', flexDirection: 'column', textAlign:'center', gap: 1}}>
+                            <Typography variant="h4">About this website</Typography>
+                            <Typography variant="subtitle1">{webDescription}</Typography>
+                        </Box>
+                    </Card>
                 </Box>
             </Box>
 
