@@ -143,6 +143,10 @@ function Home() {
                                  sx={{display: {xs: 'none', md: 'block'}, width: 120, height: 120, flexShrink: 0}}/>
                         </Box>
                     </Card>
+                    <Card>
+                        <Typography variant="h4" sx={{textAlign: 'center', mb: 2}}>Chatbox</Typography>
+
+                    </Card>
                 </Box>
             </Box>
 
