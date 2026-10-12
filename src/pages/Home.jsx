@@ -1,4 +1,4 @@
-import {Avatar, Box, Button, CssBaseline, Grid, IconButton, Paper, Stack, Typography} from "@mui/material";
+import {Avatar, Box, Button, CssBaseline, IconButton, Paper, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -35,14 +35,6 @@ const socials = [
     {label: 'Youtube', icon: <YouTubeIcon sx={{fontsize: 26}} />, href: "https://github.com/GashparFantomu"},
     {label: 'LinkedIn', icon: <LinkedInIcon sx={{fontsize: 26}} />, href: "https://github.com/GashparFantomu"}];
 
-
-const columnSx = {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 3,
-    flexGrow: 1,
-    width: '100%',
-};
 
 const wallSx ={
     columnCount: {xs: 1, md: 3},
@@ -107,8 +99,8 @@ function Home() {
                         </Box>
                     </Card>
                     <Card>
-                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign:'center', gap: 4}}>
-                            <Box component="img" src="/pet-tux1.gif"/>
+                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: 'center ',textAlign:'center', gap: 4}}>
+                            <Box component="img" src="/pet-tux1.gif" sx={{width: 164, height: 164}}/>
                             <Box>
                                 <Typography variant="h4">About this website</Typography>
                                 <Typography variant="subtitle1">{webDescription}</Typography>
@@ -116,7 +108,7 @@ function Home() {
                         </Box>
                     </Card>
                     <Card>
-                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign:'flex-start', gap: 4}}>
+                        <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: 'center', textAlign:'flex-start', gap: 4}}>
                             <Box component="img" src="/tey.gif" sx={{width: 164, height: 164}}/>
                             <Box>
                                 <Typography variant="h4">To do</Typography>
@@ -126,7 +118,31 @@ function Home() {
                             </Box>
                         </Box>
                     </Card>
+                    <Card>
+                        <Typography variant="h4" sx={{textAlign: 'center', mb: 2}}>
+                            Featured video
+                        </Typography>
+                        <Box sx={{display: 'flex', alignItems: 'center', gap: 3}}>
 
+                            <Box sx={{
+                                flex: 1,
+                                minWidth: 0,
+                                position: 'relative',
+                                aspectRatio: '16 / 9',
+                                borderRadius: 2,
+                                overflow: 'hidden'}}>
+                                <Box component="iframe"
+                                     src="https://www.youtube-nocookie.com/embed/q-43l_paCtw"
+                                     title="Description of the video"
+                                     loading="lazy"
+                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                     allowFullScreen
+                                     sx={{position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0}}/>
+                            </Box>
+                            <Box component="img" src="/ltt-linus.gif" alt="short description"
+                                 sx={{display: {xs: 'none', md: 'block'}, width: 120, height: 120, flexShrink: 0}}/>
+                        </Box>
+                    </Card>
                 </Box>
             </Box>
 
