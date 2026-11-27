@@ -5,6 +5,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import Chatbox from "../components/Chatbox.jsx";
 
 const webDescription="web description empty text to fill space more text even more text, long words like: thisisaverylongword," +
     " ieabfibshbhueabiasebf esbf uaeshfubahsfib sekfn jen fjn sekjnfesfsenj kjneskf kjes jkneskfjnesk jfjknesfjknsefkjnse";
@@ -145,7 +146,7 @@ function Home() {
                     </Card>
                     <Card>
                         <Typography variant="h4" sx={{textAlign: 'center', mb: 2}}>Chatbox</Typography>
-
+                        <Chatbox/>
                     </Card>
                 </Box>
             </Box>
