@@ -10,7 +10,7 @@ const database = new Database('chat.db');
 app.use(cors());
 app.use(express.json());
 
-database.exec('CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)');
+database.exec('CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT, author TEXT, content TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)');
 
 app.get('/', (req, res) => {
     res.send('functioneaza an plm');
@@ -22,7 +22,7 @@ app.get('/api/posts', (req, res) => {
 });
 
 app.post('/api/posts', (req, res) => {
-    const { author, content } = req.body;
+    const {author, content } = req.body;
     if(!author || !content) {
         return res.status(400).json({ error: 'Author and content are required' });
     }
