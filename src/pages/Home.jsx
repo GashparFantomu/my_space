@@ -5,6 +5,10 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import Chatbox from "../components/Chatbox.jsx";
+import {cardSx, pageContainerSx, glassInputSx} from "../theme/Styles.js";
+
+
 
 const webDescription="web description empty text to fill space more text even more text, long words like: thisisaverylongword," +
     " ieabfibshbhueabiasebf esbf uaeshfubahsfib sekfn jen fjn sekjnfesfsenj kjneskf kjes jkneskfjnesk jfjknesfjknsefkjnse";
@@ -19,16 +23,7 @@ const socialButtonSx = {
     backgroundColor: 'rgba(255, 255, 255, 0.08)',
     padding: '12px',
 };
-
-const cardSx = {
-    backgroundColor: "rgba(31, 99, 135, 0.169)",
-    color: 'white',
-    borderRadius: '16px',
-    padding: '24px',
-    marginBottom: '24px',
-    breakInside: 'avoid',
-};
-
+    
 const socials = [
     {label: 'GitHub', icon: <GitHubIcon sx={{fontsize: 26}} />, href: "https://github.com/GashparFantomu"},
     {label: 'Instagram', icon: <InstagramIcon sx={{fontsize: 26}} />, href: "https://github.com/GashparFantomu"},
@@ -49,15 +44,8 @@ function Card({children}) {
 function Home() {
     return (
 
-        <Box sx={{display: 'flex',
-            flexDirection: 'column',
-            minHeight: '100vh',
-            backgroundImage: `url(/rails1.jpg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'left',
-            backgroundAttachment: 'fixed'
-        }}><CssBaseline />
+        <Box sx={pageContainerSx}
+        ><CssBaseline />
             <Navbar/>
 
             <Box component="main" sx={{flexGrow: 1, px: 3, pt: 3}}>
@@ -145,7 +133,7 @@ function Home() {
                     </Card>
                     <Card>
                         <Typography variant="h4" sx={{textAlign: 'center', mb: 2}}>Chatbox</Typography>
-
+                        <Chatbox/>
                     </Card>
                 </Box>
             </Box>
